@@ -1,0 +1,10 @@
+2026-06-30 10:01:12 INFO Starting application
+2026-06-30 10:01:12 INFO User login: ivan@example.com
+2026-06-30 10:01:12 INFO Request GET /users 200
+2026-06-30 10:01:12 ERROR Database connection failed
+2026-06-30 10:01:12 INFO Retrying connection
+2026-06-30 10:01:12 INFO Request GET /users 200
+2026-05-31 00:00:02 ERROR Read [Errno 2] No such file or directory: 'unnamed.txt'
+2026-05-31 00:01:27 ERROR Read [Errno 2] No such file or directory: 'unnamed.txt'
+2026-05-31 00:01:35 ERROR Read [Errno 2] No such file or directory: '11_prices.txt.txt'
+2026-05-31 00:01:43 ERROR Read [Errno 2] No such file or directory: '11_new_prices.txt.txt'
