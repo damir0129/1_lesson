@@ -38,7 +38,7 @@ def db_connection(ssh_tunnel):
         password=POSTGRES_PASSWORD,
         connect_timeout=10,
         application_name="aqa_pytest",
-        options="-c statement_timeout=10_000",
+        options="-c statement_timeout=10000",
         row_factory=dict_row
     )
     yield connection
