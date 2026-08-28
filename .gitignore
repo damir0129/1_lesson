@@ -6,5 +6,7 @@ __pycache__
 __pycache__/
 .pytest_cache/
 
-allure-report/
-allure-results/
+lesson_19_0/allure-report/
+lesson_19_0/allure-results/
+
+lesson_24_SQL_python/credentials.py

@@ -1,6 +1,16 @@
+from unittest.mock import Mock
+
 import requests
 from faker import Faker
 fake = Faker()
+
+import allure
+
+@allure.feature("Employee")
+@allure.story("Get employee")
+@allure.title("Get employee")
+@allure.description("Check employee")
+
 
 def test_get_employee_success(base_url, auth_headers):
     employees = requests.get(
@@ -52,3 +62,19 @@ def test_get_employee(auth_headers, base_url, created_employee):
 
     assert employee_json['email'] == email
     assert employee_json['full_name'] == full_name
+
+@allure.feature("Employee")
+@allure.story("Mock and monkeypatch")
+@allure.title("Get employee with Mock")
+def test_get_employee_with_mock(base_url, auth_headers, monkeypatch):
+    with allure.step("prepare payload"):
+        email = fake.email()
+        full_name = fake.name()
+        payload = {
+            "email": email,
+            "full_name": full_name,
+        }
+
+        fake_response = Mock()
+        fake_response.status_code = 200
+        fake_response.json.return_value = payload
