@@ -49,3 +49,4 @@ def db_cursor(db_connection):
     cursor = db_connection.cursor()
     yield cursor
     cursor.close()
+
